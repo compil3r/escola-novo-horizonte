@@ -34,9 +34,3 @@ O objetivo deste projeto é criar um material interativo que explore questões r
    - **Escola**: Explora o papel da escola no novo modelo educacional.
    - **Comunidade**: Discute as expectativas e necessidades da comunidade em relação à educação.
 
-
-## Como Usar
-
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
