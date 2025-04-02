@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Material Interativo - Novo Horizonte</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📚%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #1E2A38;
+      color: #FFFFFF;
+      line-height: 1.6;
+    }
+    header {
+      background: #1E2A38;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: #fbae41; /* Cor alterada para #fbae41 */
+    }
+    header p {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      color: #DDE2E7;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .section {
+      background: #F4F4F6;
+      color: #2C2C2C;
+      border-radius: 12px;
+      margin-bottom: 3rem;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+    }
+
+    .situacao p{
+        text-align: justify;
+    }
+    .section:hover {
+      transform: translateY(-5px);
+    }
+    .section-header {
+      background: linear-gradient(90deg, #3AAED8, #2B9CC8);
+      color: white;
+      padding: 1.5rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .section-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+      transition: left 0.5s ease-in-out;
+      z-index: 1;
+    }
+    .section-header:hover::before {
+      left: 100%;
+    }
+    .section-header span {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .section-header .icon {
+      font-size: 1.5rem;
+      transition: transform 0.3s ease-in-out;
+      position: relative;
+      z-index: 2;
+    }
+    .section-header.collapsed .icon {
+      transform: rotate(0deg);
+    }
+    .section-content {
+      padding: 1.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      background: #FFFFFF;
+      border-top: 1px solid #DDE2E7;
+    }
+    .section-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .section-content ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+      color: #2C2C2C;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #1E2A38;
+      color: #DDE2E7;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+    }
+    footer p {
+      margin: 0.5rem 0;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      .section-header {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>
+      📚<br>
+      Sistema Educacional "Novo Horizonte"
+    </h1>
+    <p>Da Abordagem Tradicional à Flexibilização na Era da Globalização</p>
+  </header>
+  <div class="container">
+    <div class="section situacao">
+      <div class="section-header">
+        <span>🌍 Situação Problema</span>
+      </div>
+      <div class="section-content">
+        <img src="foto.png" alt="Foto da Escola">
+        <p>O sistema educacional "Novo Horizonte", tradicionalmente organizado em torno de currículos disciplinares estanques, metodologias de ensino padronizadas e uma avaliação focada na memorização de conteúdos, sempre preparou seus alunos para um mercado de trabalho que, até recentemente, demandava habilidades mais específicas e rotineiras. A estabilidade dos empregos e a previsibilidade das carreiras eram premissas subjacentes a esse modelo.</p>
+        <p>No entanto, impulsionado pelas transformações da reestruturação produtiva e pelas demandas de uma economia globalizada e cada vez mais flexível, o governo do estado anuncia uma reforma educacional abrangente. Inspirada nos princípios da acumulação flexível, com influências de discursos sobre qualidade, competitividade e eficiência, e buscando alinhar a formação dos jovens às novas exigências do mercado de trabalho, o sistema "Novo Horizonte" implementar as seguintes mudanças:</p>
+        <ul>
+          <li>Implementação de currículos mais flexíveis e baseados em competências.</li>
+          <li>Introdução de modelos de gestão escolar mais flexíveis.</li>
+          <li>Fomento de parcerias com o setor privado e com o "terceiro setor".</li>
+          <li>Adoção de sistemas de avaliação em larga escala com foco em indicadores de desempenho.</li>
+          <li>Utilização intensiva de tecnologias digitais e de plataformas de ensino online.</li>
+          <li>Incorporação de discursos sobre inclusão e cidadania nos currículos.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-header collapsed">
+        <span>🏛️ Governo</span>
+        <span class="icon">+</span>
+      </div>
+      <div class="section-content" style="display: none;">
+        <ul>
+          <li>Quais são as responsabilidades do Estado na garantia do direito à educação nesse novo modelo?</li>
+          <li>Como garantir eficiência e qualidade, sem abrir mão da equidade e universalização?</li>
+          <li>Qual o limite das parcerias com o setor privado? Como regular?</li>
+          <li>Qual o papel das avaliações em larga escala (ex. Enem) e como elas podem ser justas e significativas?</li>
+          <li>Como o governo pode fomentar inovação e autonomia escolar sem comprometer o controle social?</li>
+        </ul>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-header collapsed">
+        <span>🏫 Escola</span>
+        <span class="icon">+</span>
+      </div>
+      <div class="section-content" style="display: none;">
+        <ul>
+          <li>Como se organiza o currículo da escola ideal? Por disciplinas, competências ou áreas do conhecimento?</li>
+          <li>Qual o papel dos professores nesse modelo? Como se dão a formação docente e as relações de trabalho?</li>
+          <li>Que tipo de metodologias de ensino devem ser priorizadas?</li>
+          <li>Como conciliar autonomia pedagógica com metas e cobranças por desempenho?</li>
+          <li>Como as tecnologias são integradas no cotidiano escolar?</li>
+        </ul>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-header collapsed">
+        <span>👥 Comunidade</span>
+        <span class="icon">+</span>
+      </div>
+      <div class="section-content" style="display: none;">
+        <ul>
+          <li>O que a comunidade espera de uma escola? Formação para o mercado, para a vida, para a cidadania...?</li>
+          <li>Como garantir acesso equitativo a uma educação de qualidade em todas as regiões?</li>
+          <li>Qual o papel das famílias na gestão e acompanhamento escolar?</li>
+          <li>Como tornar a escola um espaço atrativo e significativo para os estudantes?</li>
+          <li>Que tipo de avaliação parece mais justa e transparente do ponto de vista de quem aprende?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2025 - Material Interativo</p>
+    <p>Mestrado Profissional em Informática na Educação - IFRS</p>
+    <p>Desenvolvido por Vitor, André, Luis e Douglas</p>
+  </footer>
+  <script>
+    // Função para alternar o conteúdo das seções
+    document.querySelectorAll('.section-header.collapsed').forEach(header => {
+      header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+        const icon = header.querySelector('.icon');
+        if (content.style.display === 'block') {
+          content.style.display = 'none';
+          icon.textContent = '+';
+        } else {
+          content.style.display = 'block';
+          icon.textContent = '-';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
